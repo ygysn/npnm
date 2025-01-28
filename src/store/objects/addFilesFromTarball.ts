@@ -3,7 +3,7 @@ import pathUtils from 'node:path'
 import fs from 'node:fs'
 import util from 'node:util'
 import tar from 'tar-stream'
-import { isFilePathInDirectoryPath } from '@utils/path'
+import { isFilePathInDirectoryPath } from '@libs/path'
 import type { ObjectsStore, ObjectHashes } from '.'
 
 export interface AddFilesFromTarOptions {

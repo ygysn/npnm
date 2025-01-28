@@ -9,7 +9,7 @@
     "strict": true,
     "skipLibCheck": true,
     "paths": {
-      "@utils/*": ["./utils/*"]
+      "@libs/*": ["./libs/*"]
     }
   }
 }

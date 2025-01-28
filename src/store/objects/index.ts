@@ -8,7 +8,7 @@ import { isFile } from 'path-type';
 import { mkdirp } from 'mkdirp';
 import { _addFilesFromTar, type AddFilesFromTarOptions } from './addFilesFromTarball';
 import { getObjectHash, MIN_OBJECT_HASH_LENGTH } from './shared';
-import { readFilesFromDirectory } from '@utils/fs';
+import { readFilesFromDirectory } from '@libs/fs';
 
 export interface AddOptions {
   hardLink: boolean

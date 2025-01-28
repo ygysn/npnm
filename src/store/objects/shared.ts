@@ -1,5 +1,5 @@
 import type { Readable } from 'node:stream'
-import { hashFile, hashStream } from '@utils/hash'
+import { hashFile, hashStream } from '@libs/hash'
 
 export const DEFAULT_HASH_ALGORITHM = 'sha256'
 export const MIN_OBJECT_HASH_LENGTH = 32
