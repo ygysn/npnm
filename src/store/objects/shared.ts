@@ -13,9 +13,9 @@ export async function getObjectHash (file: string | Readable): Promise<string | 
   const objectHash = typeof file === 'string'
     ? await hashFile({ encoding: 'hex' }, file, DEFAULT_HASH_ALGORITHM)
     : await hashStream({ encoding: 'hex' }, file, DEFAULT_HASH_ALGORITHM)
-  
+
   if (objectHash === null) {
-    return null;
+    return null
   }
 
   return objectHash.toString()

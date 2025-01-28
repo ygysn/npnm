@@ -27,10 +27,10 @@ export const _addFilesFromTar = util.promisify(function (
 
   tarExtractStream.on('entry', (headers, entry, next) => {
     if (
-      pathUtils.isAbsolute(headers.name)
-      || (basePath !== undefined && !isFilePathInDirectoryPath(headers.name, basePath))
+      pathUtils.isAbsolute(headers.name) ||
+      (basePath !== undefined && !isFilePathInDirectoryPath(headers.name, basePath))
     ) {
-      return;
+      return
     }
 
     if (headers.type === 'file' || headers.type === 'contiguous-file') {
@@ -38,7 +38,7 @@ export const _addFilesFromTar = util.promisify(function (
         .then((objectHash) => {
           objectHashes.push({
             path: headers.name,
-            hash: objectHash,
+            hash: objectHash
           })
           next()
         })
